@@ -27,13 +27,25 @@
         }
 
         &__call {
+            margin-right: 10px;
             font-size: 12px;
+        }
+    }
+
+    .offer {
+        .container {
+            padding: 0 40px;
         }
     }
 }
 
 @media (max-width:998px){
+    .title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
     .header {
+        padding-top: 20px;
         &__col {
             &--menu {
                 position: fixed;
@@ -42,10 +54,11 @@
                 top: 115px;
                 left: 0;
                 overflow: scroll;
+                z-index: 1000;
                 background-color: #fff; 
-                padding-top: 40px;
                 transition: .3s;
                 &.active {
+                    padding-top: 40px;
                     height: 100%;
                 }
             }
@@ -143,11 +156,71 @@
             }
         }
     }
+
+    .offer {
+        &__slider-item {
+            height: rem(560);
+        }
+
+        &__title {
+            font-size: rem(35);
+        }
+
+        &__btn {
+            margin-top: 20px;
+        }
+    }
+
+    .cooperation {
+
+        &__title {
+            margin-bottom: 45px;
+        }
+        &__steps {
+            flex-direction: column;
+        }
+
+        &__step {
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            display: flex;
+            &::after {
+                width: 2px;
+                height: 100%;
+                left: 32px;
+            }
+        }
+
+        &__step-count {
+            min-width: 64px;
+            min-height: 64px;
+        }
+        
+        &__step-title {
+            max-width: 100%;
+            margin-top: 0;
+        }
+
+        &__step-descr {
+            padding-left: rem(22);
+        }
+
+        &__step-text {
+            padding-bottom: rem(40);
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width:640px){
 }
 
 @media (max-width:576px){
     .header {
         padding-top: 10px;
+        padding-bottom: 10px;
         &__col {
             &--logo {
                 width: 30%;
@@ -165,8 +238,23 @@
         }
 
         &__call {
-            margin-right: 10px;
             max-width: 120px;
+        }
+    }
+
+    .offer {
+        &__slider-item {
+            height: 450px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+        &__btn {
+            margin-top: 40px;
+            padding: 0 30px
+        }
+        .itc-slider-btn {
+            display: none;
         }
     }
 }
@@ -175,4 +263,5 @@
     .header__call {
         display: none;
     }
+
 }
