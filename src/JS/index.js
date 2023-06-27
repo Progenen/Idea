@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
             })
         })
-    }
+    };
+
+    lightGallery(document.getElementById('giftGallery')); 
 
 });

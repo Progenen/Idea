@@ -113,19 +113,131 @@ span {
 
 .text {
     font-weight: 300;
+    line-height: 1.5;
     &--sm {
         font-size: rem(20);
-    }
-    &--md {
-        font-size: rem(22);
     }
     &--lg {
         font-size: rem(24);
     }
 }
 
-.iti__flag {background-image: url("../images/flags.png");}
+.text--md {
+    font-size: rem(22);
+}
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .iti__flag {background-image: url("../images/flags@2x.png");}
+.lg-backdrop {
+    background-color: #fff;
+}
+
+.lg-toolbar {
+    background-color: #fff;
+}
+
+.form {
+    display: flex;
+    &--row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__input {
+        width: 37.44%;    
+        height: 56px;
+        box-sizing: border-box;
+        color: #000000;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        font-size: 16px;
+        padding: 0 20px;
+        &::placeholder {
+            font-size: 16px;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-size: 16px;
+            &:focus {
+                outline: none;
+            }
+            
+        }
+    }
+    
+    &__phone {
+        padding-right: 20px;
+        .iti {
+            width: 100%;
+            height: 100%;
+        }
+        .iti__flag {
+            background-color: #c5c5c5;
+            -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+            box-shadow: 0 0 5px rgba(0,0,0,.3);
+        }
+        .iti__flag-container:hover .iti__selected-flag {
+            background: transparent;
+        }
+        .iti__country-list {
+            margin-left: -20px;
+        }
+        ul {
+            border-radius: 10px;
+        }
+        .iti__country-name {
+            color: #000;
+            font-size: 14px;
+        }
+        .iti__dial-code {
+            margin-left: auto;
+        }
+    }   
+
+    &__label {
+        display: none;
+        background-color: #F95D51;
+        font-size: 20px;
+        width: 100%;
+        margin-top: 20px;
+        color: #fff;
+        font-weight: 300;
+        padding: 20px 0;
+        &.error {
+            display: block;
+        }
+        &.right {
+            display: block;
+            background-color: #62C584;
+        }
+    }
+
+    &__btn {
+        max-width: 163px;
+        height: 56px;
+        font-size: 16px;
+        padding: 0 40px;
+        border: 1px solid #000;
+    }
+
+    &__agree {
+        text-align: center;
+        margin-left: auto;
+        margin-top: rem(30);
+        font-size: 15px;
+        font-weight: 300;
+        margin-right: auto;
+        a {
+            font-family: Ubuntu, Arial, sans-serif;
+            font-size: 17px;
+            text-align: center;
+            box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset;
+            color: rgb(116, 116, 116);
+            text-decoration: none;
+        }
+    }
 }
